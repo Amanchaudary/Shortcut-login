@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App link</title>
+    <title>Colorful Bookmarks</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            overflow: auto;
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:Arial;background:#f0f5ff;padding:2rem}
+        
+        .box{
+            padding:2rem;margin:2rem 0;border-radius:15px;
+            background:linear-gradient(135deg,#ff6b6b,#ff8e8e);box-shadow:0 10px 20px rgba(0,0,0,0.1);
         }
-        .primary{
-            font-size: 22px;
-            border: 2px solid red;
-            box-shadow: 5px 5px 15px 5px #e40e0e;
+        .box:nth-child(even){background:linear-gradient(135deg,#4bc0c8,#7ed6df)}
+        
+        h1{color:#2d3436;text-align:center;margin:2rem 0;font-size:2.5em}
+        h2{color:#fff;margin-bottom:1.5rem;text-shadow:2px 2px 4px rgba(0,0,0,0.2)}
+        
+        .links{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit, minmax(200px,1fr))}
+        a{
+            display:block;padding:1rem;background:rgba(255,255,255,0.9);border-radius:8px;
+            text-decoration:none;color:#2d3436;font-weight:bold;transition:0.3s;
+            border:2px solid transparent;
         }
-        .extra{
-            font-size: 22px;
-            border: 2px solid aqua;
-            box-shadow: 5px 5px 15px 5px #4bbac2;
-        }
+        a:hover{transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,0.2);background:#fff}
     </style>
 </head>
-
 <body>
-    <div class="primary">
-        <h2>Primary Bookmarks</h2>
-        <p><a target="_blank" href="http://www.facebook.com">open facebook</a></p>
-        <p><a target="_blank" href="https://www.tiktok.com">open tiktok</a></p>
-        <p><a target="_blank" href="https://www.amazon.co.jp/">open amezon</a></p>
-        <p><a target="_blank" href="https://bitbank.cc/">open bitbank</a></p>
-        <p><a target="_blank" href="https://jp.mercari.com/">open mercari</a></p>
+    <h1>🌈 Colorful Bookmarks</h1>
+
+    <div class="box">
+        <h2>Primary Links</h2>
+        <div class="links">
+            <a href="http://facebook.com" target="_blank">Facebook</a>
+            <a href="https://tiktok.com" target="_blank">TikTok</a>
+            <a href="https://amazon.co.jp" target="_blank">Amazon JP</a>
+            <a href="https://bitbank.cc" target="_blank">Bitbank</a>
+            <a href="https://jp.mercari.com" target="_blank">Mercari</a>
+        </div>
     </div>
-    <h1>freelancing Bookmarks</h1>
-    <div class="extra">
-        <p><a target="_blank" href="https://www.fiverr.com/">open fiverr</a></p>
-        <p><a target="_blank" href="https://crowdworks.jp">open crowdworks</a></p>
-        <p><a target="_blank" href="https://www.freelancer.com">open freelancer</a></p>
-        <p><a target="_blank" href="https://crowdtech.jp/">open crowdtech</a></p>
-        <p><a target="_blank" href="http://www.quora.com">open quora</a></p>
-        <p><a target="_blank" href="http://www.stackoverflow.com">open stackoverflow</a></p>
-        <p><a target="_blank" href="http://www.wekipedia.com">open wikipedia</a></p>
+
+    <div class="box">
+        <h2>Freelancing</h2>
+        <div class="links">
+            <a href="https://fiverr.com" target="_blank">Fiverr</a>
+            <a href="https://crowdworks.jp" target="_blank">CrowdWorks</a>
+            <a href="https://freelancer.com" target="_blank">Freelancer</a>
+            <a href="https://crowdtech.jp" target="_blank">CrowdTech</a>
+            <a href="http://quora.com" target="_blank">Quora</a>
+            <a href="http://stackoverflow.com" target="_blank">Stack Overflow</a>
+            <a href="https://wikipedia.org" target="_blank">Wikipedia</a>
+        </div>
     </div>
 </body>
-
 </html>
